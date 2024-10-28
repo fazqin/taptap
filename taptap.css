@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   
+    font-family: Arial, sans-serif;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+ 
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+}
+
+.background-video {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.game-container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#tap-button {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #969c9e;
+    border: 100px;
+    outline: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    top: 60px;
+    margin-top: 20px;
+}
+
+#tap-button:hover {
+    box-shadow: 0 0 100px 10px #1423f5;
+}
+
+#tap-button img {
+    width: 150px;
+    height: 200PX;
+    pointer-events: none;
+}
+
+.score {
+    position:fixed;
+    top: 10px;
+    right: 150px;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: #1423f5;
+    border-radius: 25%;
+    outline: 50px;
+}
+
+.h2{
+
+   position:fixed;
+   text-align:center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 10vh;
+  background-color: #1423f5;
+  outline: 50px;
+  border-radius :25% ;
+  top: 60px;
+  right: 605px;
+  color: white;
+  z-index: 1;
+  font-family: 'courier';
+  transition: box-shadow 0.3s ease;
+  border: #14d3f5;
+  cursor: pointer;
+  
+}
+#h2:hover{
+    box-shadow: 0 0 100px 10px #14c1f5;
+}
+
+@keyframes bubble-up {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+}
+
+.bubble {
+    position: absolute;
+    bottom: 50px; /* Adjust as needed */
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(173, 216, 230, 0.8); /* Light blue color */
+    animation: bubble-up 2s ease-in-out forwards;
+}
+
+/* Tambahkan aturan untuk gambar gelembung */
+.bubble img {
+    width: 30px; /* Ubah ukuran sesuai kebutuhan */
+    height: 30px; /* Ubah ukuran sesuai kebutuhan */
+    border-radius: 50%; /* Jika ingin gambar tetap berbentuk bulat */
+    animation: bubble-up 2s ease-in-out forwards;
+}
+
+
+
+
